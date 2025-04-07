@@ -12,7 +12,7 @@ const recipeSchema = new mongoose.Schema(
     },
     difficulty: {
       type: String,
-      enum: ["Easy", "Intermediate", "Hard"],
+      enum: ["Easy", "Intermediate", "Difficult"],
     },
     prepTime: {
       type: Number,
@@ -42,6 +42,6 @@ const recipeSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const recipe = mongoose.model("Recipe", recipeSchema);
+const Recipe = mongoose.model("Recipe", recipeSchema);
 
-module.exports = recipe;
+module.exports = Recipe;

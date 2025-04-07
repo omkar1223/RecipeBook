@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 const mongoUri = process.env.MONGOURI;
 
@@ -13,4 +14,4 @@ const connectToDatabase = async () => {
     });
 };
 
-module.exports = connectToDatabase;
+module.exports = { connectToDatabase };
